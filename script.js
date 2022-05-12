@@ -21,5 +21,7 @@ const deleteElement = (e) => {
     // console.log(e.target);
     // console.log('Hover');
 };
-
-btn[2].addEventListener('mouseenter', deleteElement);
+// btn[2].addEventListener('mouseenter', deleteElement);
+btn.forEach(item => {
+    item.addEventListener('mouseenter', deleteElement);
+});
