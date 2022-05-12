@@ -11,8 +11,13 @@ btn[1].onclick = () => {
 //     alert('Second click');
 // });
 
+let i = 0;
 const deleteElement = (e) => {
-    e.target.remove();
+    console.log(e.target);
+    i++;
+    if (i == 1) {
+        btn[2].removeEventListener('mouseenter', deleteElement);
+    }
     // console.log(e.target);
     // console.log('Hover');
 };
