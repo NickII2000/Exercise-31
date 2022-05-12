@@ -1,4 +1,5 @@
-const btn = document.querySelectorAll('button');
+const btn = document.querySelectorAll('button'),
+    link = document.querySelector('a');
 btn[1].onclick = () => {
     alert("WOW-2");
 };
@@ -24,4 +25,10 @@ const deleteElement = (e) => {
 // btn[2].addEventListener('mouseenter', deleteElement);
 btn.forEach(item => {
     item.addEventListener('mouseenter', deleteElement);
+});
+
+link.addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log(event.target);
+    console.log('event.preventDefault()');
 });
