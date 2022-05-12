@@ -11,8 +11,10 @@ btn[1].onclick = () => {
 //     alert('Second click');
 // });
 
-btn[2].addEventListener('mouseenter', (e) => {
+const deleteElement = (e) => {
     e.target.remove();
     // console.log(e.target);
     // console.log('Hover');
-});
+};
+
+btn[2].addEventListener('mouseenter', deleteElement);
